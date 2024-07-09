@@ -1,4 +1,4 @@
-
+/*
 body {
   font-family: 'Arial', sans-serif;
   background-color: #ffffff;
@@ -15,11 +15,10 @@ body {
   max-width: 600px;
   padding: 20px;
   box-sizing: border-box;
-  background-color: #fff; /* White background for the container */
+  background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the container */
-  margin-top: 20px; /* Add margin to separate from the top */
-}
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  margin-top: 20px; 
 
 h1 {
   text-align: center;
@@ -28,7 +27,7 @@ h1 {
 }
 
 form {
-  margin-top: 20px; /* Add margin to separate the form from the heading */
+  margin-top: 20px; 
 }
 
 fieldset {
@@ -71,7 +70,7 @@ button[type="submit"]:hover {
   transition: ease-in;
 }
 
-/*For Mobile Devices */
+#For Mobile Devices 
 
 @media (max-width: 600px) {
 
@@ -100,4 +99,69 @@ button[type="submit"] {
 }
 
 
+}
+ */
+ body {
+  font-family: Arial, sans-serif;
+  background-color: #eb8787;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: #fff;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  width: 100%;
+  margin: 10px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5em;
+}
+
+fieldset {
+  border: 1px solid #ddd;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 4px;
+}
+
+legend {
+  font-weight: bold;
+  color: #555;
+}
+
+label {
+  display: block;
+  margin: 0.5em 0;
+  font-size: 1em;
+  color: #666;
+}
+
+input[type="radio"] {
+  margin-right: 0.5em;
+}
+
+button {
+  display: block;
+  background-color: #d14848;
+  padding: 7px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e24040;
 }
