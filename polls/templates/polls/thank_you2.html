@@ -2,13 +2,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Thank You!</title>
+    <title>Thank You - Part 2!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{% static 'styles_thankyou.css' %}">
 </head>
 <body>
     <div class="container">
-        <h1>Your Responses is submitted</h1>
+        <h1>Your Response for Part 2 is Submitted</h1>
         {% for response_summary in responses_summary %}
             <div class="question-summary">
                 <h4>{{ response_summary.question.question_text }}</h4>
@@ -23,7 +23,8 @@
                 </ul>
             </div>
         {% endfor %}
-        <button onclick="window.location.href='{% url 'polls:questions2' %}'">Next</button>
+        <button>Next</button>
     </div>
 </body>
 </html>
+
