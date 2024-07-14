@@ -65,12 +65,36 @@ WSGI_APPLICATION = "polls_project.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+
+# Local 
+'''
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'django_polls',
+        'USER': 'django_user',
+        'PASSWORD': '12345678',
+        'HOST': 'localhost',  # Set to the database host, e.g., '127.0.0.1'
+        'PORT': '5432',  # Set to the database port, e.g., '5432'
     }
 }
+'''
+# render 
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'django_polls_project',
+        'USER': 'django_polls_project_user',
+        'PASSWORD': 'ZArmweZF6TpfJ0SG5zhI6Iv4ok8IxHyG',
+        'HOST': 'dpg-cq9mgfqju9rs73b79no0-a',
+        'PORT': '5432',
+    }
+}
+
+
+
+
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
@@ -102,11 +126,11 @@ USE_I18N = True
 USE_TZ = True
 
 #For Development # Static files (CSS, JavaScript, Images)
-'''
+
 STATIC_URL = "/static/"
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 STATICFILES_DIRS = [BASE_DIR / 'polls/static']
-
+'''
 # For Deployment # Static files (CSS, JavaScript, Images)
 '''
 STATIC_URL = "/static/"
