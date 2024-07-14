@@ -5,19 +5,19 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-#Deployment Envionment Settings
-
-SECRET_KEY = os.environ.get("SECRET_KEY")
-DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
-
-
 #Development Envionment Settings
 '''
 SECRET_KEY = ("SECRET_KEY")
 DEBUG = True
 ALLOWED_HOSTS = []
 '''
+
+#Deployment Envionment Settings
+
+SECRET_KEY = os.environ.get("SECRET_KEY")
+DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
+
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -66,7 +66,7 @@ WSGI_APPLICATION = "polls_project.wsgi.application"
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 
-# Local 
+# For Development
 '''
 DATABASES = {
     'default': {
@@ -79,7 +79,7 @@ DATABASES = {
     }
 }
 '''
-# render 
+# For Development
 
 DATABASES = {
     'default': {
@@ -87,12 +87,10 @@ DATABASES = {
         'NAME': 'django_polls_project',
         'USER': 'django_polls_project_user',
         'PASSWORD': 'ZArmweZF6TpfJ0SG5zhI6Iv4ok8IxHyG',
-        'HOST': 'dpg-cq9mgfqju9rs73b79no0-a',
+        'HOST': 'dpg-cq9mgfqju9rs73b79no0-a.oregon-postgres.render.com',
         'PORT': '5432',
     }
 }
-
-
 
 
 # Password validation
@@ -126,13 +124,13 @@ USE_I18N = True
 USE_TZ = True
 
 #For Development # Static files (CSS, JavaScript, Images)
-
+'''
 STATIC_URL = "/static/"
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 STATICFILES_DIRS = [BASE_DIR / 'polls/static']
 '''
 # For Deployment # Static files (CSS, JavaScript, Images)
-'''
+
 STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
