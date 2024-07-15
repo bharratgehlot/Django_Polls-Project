@@ -1,5 +1,6 @@
 from pathlib import Path
 import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -66,7 +67,7 @@ WSGI_APPLICATION = "polls_project.wsgi.application"
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 
-# For Development
+# For Development 
 '''
 DATABASES = {
     'default': {
@@ -78,8 +79,8 @@ DATABASES = {
         'PORT': '5432',  # Set to the database port, e.g., '5432'
     }
 }
-'''
-# For Development
+
+# For Deployment 
 
 DATABASES = {
     'default': {
@@ -91,7 +92,12 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+'''
+#Using dj- database url
 
+DATABASES = {
+    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
